@@ -1,0 +1,41 @@
+@use "../global" as *;
+/* ===============================================
+#全体の共通レイアウト
+=============================================== */
+.l-container {
+    overflow: hidden;
+}
+
+.l-main {
+    &__inner {
+        @include mq {
+            @include inner;
+            position: relative;
+        }
+
+        @include mq(medium, max, true) {
+            @include inner_sp;
+            position: relative;
+        }
+    }
+
+    &__gray-bg {
+        background-image: linear-gradient(
+            90deg,
+            $color-gray 0%,
+            $color-gray 82.6%,
+            #fff 82.6%,
+            #fff 100%,
+        );
+        
+        @include mq(medium, max, true) {
+            background-image: linear-gradient(
+                90deg,
+                $color-gray 0%,
+                $color-gray 86.7%,
+                #fff 86.7%,
+                #fff 100%,
+            );
+        }
+    }
+}

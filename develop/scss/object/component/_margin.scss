@@ -1,0 +1,21 @@
+@use "../../global" as *;
+/* ===============================================
+#共通の余白margin
+=============================================== */
+.c-margin {
+    &__bottom100 {
+        margin-bottom: 100px;
+        
+        @include mq(medium, max, true) {
+            margin-bottom: 88px;
+        }
+    }
+    
+    &__bottom80 {
+        margin-bottom: 80px;
+        
+        @include mq(medium, max, true) {
+            margin-bottom: 44px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@use "../../global" as *;
+/* ===============================================
+#共通の余白padding
+=============================================== */
+.c-padding {
+    &__mid80 {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        
+        @include mq(medium, max, true) {
+            padding-top: 44px;
+            padding-bottom: 44px;
+            
+        }
+    }
+    
+    &__top80 {
+        padding-top: 80px;
+        
+        @include mq(medium, max, true) {
+            padding-top: 40px;
+        }
+    }
+    
+    &__bottom50 {
+        padding-bottom: 50px;
+        
+        @include mq(medium, max, true) {
+            padding-bottom: 44px;
+        }
+    }
+}

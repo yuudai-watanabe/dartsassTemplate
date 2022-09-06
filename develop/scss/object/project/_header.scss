@@ -1,0 +1,64 @@
+@use "../../global" as *;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color $duration;
+    
+    
+    &.headerColorScroll {
+        background-color: $color-text;
+        .header__nav {
+            border-color: transparent;
+            padding: 10px 0;
+        }
+    }
+    
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 25px 0 14px;
+        border-bottom: 1px solid rgba($color: #FFFFFF, $alpha: .6);
+        transition: padding $duration;
+        
+        @include mq(medium, max, true) {
+            border-color: transparent;
+            padding: 16px 0 16px;
+        }
+    }
+    
+    &__logo {
+        width: 146px;
+        
+        @include mq(medium, max, true) {
+            width: 102px;
+            position: relative;
+            z-index: 101;
+        }
+    }
+    
+    &__links {
+        display: flex;
+        align-items: center;
+        
+        @include mq(medium, max, true) {
+            display: none;
+        }
+    }
+    
+    &__link {
+        margin-right: 60px;
+        color: #fff;
+        @include fontsize(18);
+        font-family: $font-family-en;
+        line-height: 1;
+        
+        @include mq(large, max, true) {
+            margin-right: 0;
+            margin-left: 40px;
+        }
+    }
+}
